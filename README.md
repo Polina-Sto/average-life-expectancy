@@ -52,7 +52,8 @@ plt.show()
 ```
 На выходе получаем следующий график:
 
-<img width="389" height="262" alt="image" src="https://github.com/user-attachments/assets/56a0541d-d84c-490c-8adf-45d7c6f1f235" />
+<img width="400" height="300" alt="image" src="https://github.com/user-attachments/assets/56a0541d-d84c-490c-8adf-45d7c6f1f235" />
+
 Можно сделать вывод, что примерно в половине стран люди в среднем живут от 70 до 78. Если смотреть более обобщённо, то от 60 до 85. Остальные немного меньшо, но встречается это гараздо реже.
 
 ### №2. Какие 10 стран имеют самую высокую и низкую продолжительность жизни?
@@ -110,7 +111,8 @@ plt.tight_layout() # пошире стал график
 ```
 На выходе получаем:
 
-<img width="447" height="280" alt="image" src="https://github.com/user-attachments/assets/31dc03a8-deb4-4f42-8bef-ced85d05c467" />
+<img width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/31dc03a8-deb4-4f42-8bef-ced85d05c467" />
+
 
 ### №4. Есть ли выбросы в наборе данных?
 То есть мы постараемся найти все значения, которые сильно отличаются от остальных. Например, средняя продолжительность жизни составляет 12 лет, Такого явно мне может быть в рамках целой страны.
@@ -188,10 +190,10 @@ plt.show()
 ```
 
 Корреляция признаков по 2021 году:
-<img width="422" height="337" alt="image" src="https://github.com/user-attachments/assets/b2ffcfa7-8c9b-4d4b-b9f9-cc468662c24d" />
+<img width="500" height="350" alt="image" src="https://github.com/user-attachments/assets/b2ffcfa7-8c9b-4d4b-b9f9-cc468662c24d" />
 
 Корреляция по 2023 году:
-<img width="422" height="337" alt="image" src="https://github.com/user-attachments/assets/0cbac562-218c-4b12-88fd-df6ee1d0fa7a" />
+<img width="500" height="350" alt="image" src="https://github.com/user-attachments/assets/0cbac562-218c-4b12-88fd-df6ee1d0fa7a" />
 
 ## Выводы
 ```python
