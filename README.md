@@ -50,7 +50,7 @@ df['2023'].plot(kind='hist', color='#CD5C5C')
 plt.xlabel('average-life-expectancy')
 plt.show()
 ```
-На выходе получаем следующий график:
+На выходе получаем следующий график: <br />
 
 <img width="400" height="300" alt="image" src="https://github.com/user-attachments/assets/56a0541d-d84c-490c-8adf-45d7c6f1f235" />
 
@@ -72,7 +72,7 @@ plt.barh(asc['Country Name'][0:5], asc['2022'][0:5], color='hotpink')
 plt.subplot(2, 1, 2)
 plt.barh(desc['Country Name'][0:5], desc['2022'][0:5], color='purple')
 ```
-На выходе получим следующий график:
+На выходе получим следующий график: <br />
 
 <img width="476" height="248" alt="image" src="https://github.com/user-attachments/assets/5e7cb403-a6fe-4004-98e0-32df8574c8a6" />
 
@@ -141,10 +141,10 @@ for i in df.columns:
             if i < 30:
                 print(i)
 ```
-и получим следующий рез-т:
+и получим следующий рез-т: <br />
 28.054 28.278 28.506 28.249 28.781 25.633 25.858 26.103 25.396 25.632 26.522 25.777 12.784 24.314 11.632
 25.863 11.295 24.875 11.573 22.933 24.172 20.721 10.989 28.217 28.628 25.418 29.185 25.034 21.938
-22.263 12.158 19.048 14.665 18.818
+22.263 12.158 19.048 14.665 18.818 <br />
 Это значение из всего массива данных. Возможно, что значения близкие к 30 могли быть в малоразвитых странах. Но средняя продолжительность жизни 10 лет точно не могла существовать.
 
 ```python
@@ -190,10 +190,10 @@ plt.title('Корреляция показателей')
 plt.show()
 ```
 
-Корреляция признаков по 2021 году:
+Корреляция признаков по 2021 году: <br />
 <img width="500" height="380" alt="image" src="https://github.com/user-attachments/assets/b2ffcfa7-8c9b-4d4b-b9f9-cc468662c24d" />
 
-Корреляция по 2023 году:
+Корреляция по 2023 году: <br />
 <img width="500" height="380" alt="image" src="https://github.com/user-attachments/assets/0cbac562-218c-4b12-88fd-df6ee1d0fa7a" />
 
 ## Выводы
