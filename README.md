@@ -127,14 +127,72 @@ for i in df.columns:
         sns.boxplot(data=df, x=i)
         plt.show()
 ```
+Если интересно узнать какие именно значения являются выбросами, то напишем:
+```python
+for i in df.columns:
+    if i in ['Country Name', 'Country Code', 
+               'Indicator Name', 'Indicator Code', 'Unnamed: 69']:
+        continue
+    else:
+        for i in df[i]:
+            if i < 30:
+                print(i)
+```
+и получим следующий рез-т:
+28.054 28.278 28.506 28.249 28.781 25.633 25.858 26.103 25.396 25.632 26.522 25.777 12.784 24.314 11.632
+25.863 11.295 24.875 11.573 22.933 24.172 20.721 10.989 28.217 28.628 25.418 29.185 25.034 21.938
+22.263 12.158 19.048 14.665 18.818
+Это значение из всего массива данных. Возможно, что значения близкие к 30 могли быть в малоразвитых странах. Но средняя продолжительность жизни 10 лет точно не могла существовать.
 
 ```python
+# Оставляем только годовые столбцы
+year_columns = [col for col in vvp.columns if col.isdigit()]
+# Среднее по годам для каждой страны
+vvp['median_gdp_by_years'] = vvp[year_columns].median(axis=1)
+for i in vvp.columns:
+    if i in ['Country Name', 'Country Code', 
+               'Indicator Name', 'Indicator Code', 'Unnamed: 69']:
+        continue
+    else:
+        vvp.fillna({i: vvp['median_gdp_by_years']}, inplace=True)
 
+year = '2023'
+
+# Функция для извлечения данных по году
+def extract_year_data(df, indicator_name):
+    df_clean = df[['Country Name', 'Country Code', year]].copy()
+    df_clean = df_clean.rename(columns={year: indicator_name})
+    df_clean[indicator_name] = pd.to_numeric(df_clean[indicator_name], errors='coerce')
+    return df_clean[['Country Name', 'Country Code', indicator_name]]
+
+df = extract_year_data(df, 'life_expectancy')
+vvp = extract_year_data(vvp, 'gdp_per_capita')
+health = extract_year_data(health, 'health_spending')
+gra = extract_year_data(gra, 'smart')
+
+df_final = df
+for df in [vvp, health, gra]:
+    df_final = df_final.merge(df, on=['Country Name', 'Country Code'], how='outer')
+
+df_final = df_final.drop('Country Code', axis=1)
+
+# Корреляция
+corr = df_final.select_dtypes(include=[float, int]).corr()
+print("Корреляция с продолжительностью жизни:")
+print(corr)
+
+# Тепловая карта
+sns.heatmap(corr, annot=True, cmap='coolwarm')
+plt.title('Корреляция показателей')
+plt.show()
 ```
 
-```python
+Корреляция признаков по 2021 году:
+<img width="422" height="337" alt="image" src="https://github.com/user-attachments/assets/b2ffcfa7-8c9b-4d4b-b9f9-cc468662c24d" />
 
-```
+Корреляция по 2023 году:
+<img width="422" height="337" alt="image" src="https://github.com/user-attachments/assets/0cbac562-218c-4b12-88fd-df6ee1d0fa7a" />
+
 
 ```python
 
