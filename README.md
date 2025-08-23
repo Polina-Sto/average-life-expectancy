@@ -73,6 +73,7 @@ plt.subplot(2, 1, 2)
 plt.barh(desc['Country Name'][0:5], desc['2022'][0:5], color='purple')
 ```
 На выходе получим следующий график:
+
 <img width="476" height="248" alt="image" src="https://github.com/user-attachments/assets/5e7cb403-a6fe-4004-98e0-32df8574c8a6" />
 
 ### №3. Как изменилась средняя продолжительность жизни в мире с 2000 по 2015 год?
@@ -190,10 +191,10 @@ plt.show()
 ```
 
 Корреляция признаков по 2021 году:
-<img width="500" height="350" alt="image" src="https://github.com/user-attachments/assets/b2ffcfa7-8c9b-4d4b-b9f9-cc468662c24d" />
+<img width="500" height="380" alt="image" src="https://github.com/user-attachments/assets/b2ffcfa7-8c9b-4d4b-b9f9-cc468662c24d" />
 
 Корреляция по 2023 году:
-<img width="500" height="350" alt="image" src="https://github.com/user-attachments/assets/0cbac562-218c-4b12-88fd-df6ee1d0fa7a" />
+<img width="500" height="380" alt="image" src="https://github.com/user-attachments/assets/0cbac562-218c-4b12-88fd-df6ee1d0fa7a" />
 
 ## Выводы
 ```python
