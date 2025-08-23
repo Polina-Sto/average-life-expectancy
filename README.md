@@ -43,3 +43,48 @@ for i in df.columns:
         df[i] = np.where(df[i] < 30, 30, df[i])
 ```
 
+### Шаг 4. Выявление интересующих данных + построение графиков.
+№1 по анализу. Как распределена продолжительность жизни по странам?
+```python
+df['2023'].plot(kind='hist', color='#CD5C5C')
+plt.xlabel('years')
+plt.show()
+```
+На выходе получаем следующий графикЖ
+<img width="389" height="262" alt="image" src="https://github.com/user-attachments/assets/56a0541d-d84c-490c-8adf-45d7c6f1f235" />
+
+
+```python
+
+```
+
+```python
+
+```
+
+```python
+
+```
+
+```python
+
+```
+
+```python
+
+```
+
+```python
+
+```
+
+```python
+
+```
+
+
+
+
+
+
+
