@@ -187,10 +187,12 @@ plt.show()
 ```
 
 Корреляция признаков по 2021 году: <br />
-<img width="500" height="380" alt="image" src="https://github.com/user-attachments/assets/b2ffcfa7-8c9b-4d4b-b9f9-cc468662c24d" />
+<img width="500" height="380" alt="image" src="https://github.com/user-attachments/assets/b2ffcfa7-8c9b-4d4b-b9f9-cc468662c24d" />  <br />
+Как можно увидеть на графике, в 2021 годе наибольшая корреляция есть у средней продолжительности жизни и 
 
 Корреляция по 2023 году: <br />
-<img width="500" height="380" alt="image" src="https://github.com/user-attachments/assets/0cbac562-218c-4b12-88fd-df6ee1d0fa7a" />
+<img width="500" height="380" alt="image" src="https://github.com/user-attachments/assets/0cbac562-218c-4b12-88fd-df6ee1d0fa7a" /> 
+Как можно увидеть на графике, в 2021 годе наибольшая корреляция есть у средней продолжительности жизни и 
 
 ## Выводы
 ```python
